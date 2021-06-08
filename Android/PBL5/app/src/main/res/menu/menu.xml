@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    </group>
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_pump_controller"
+            android:icon="@drawable/water"
+            android:title="Điều khiển tưới cây" />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="Lịch sử tưới" />
+
+        <item
+            android:id="@+id/nav_chart"
+            android:icon="@drawable/linechart"
+            android:title="Đồ thị lượng mưa" />
+    </group>
+
+<!--    <item android:title="Profile">-->
+
+<!--        <menu>-->
+
+<!--            <group android:checkableBehavior="single">-->
+
+<!--                <item-->
+<!--                    android:id="@+id/nav_login"-->
+<!--                    android:icon="@drawable/ic_baseline_home_24"-->
+<!--                    android:title="Login" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/nav_profile"-->
+<!--                    android:icon="@drawable/ic_baseline_home_24"-->
+<!--                    android:title="Profile" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/nav_logout"-->
+<!--                    android:icon="@drawable/ic_baseline_home_24"-->
+<!--                    android:title="Logout" />-->
+<!--            </group>-->
+<!--        </menu>-->
+<!--    </item>-->
+
+<!--    <item android:title="Communicate">-->
+
+<!--        <menu>-->
+
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/ic_baseline_home_24"-->
+<!--                android:title="Share" />-->
+
+
+<!--        </menu>-->
+<!--    </item>-->
+</menu>

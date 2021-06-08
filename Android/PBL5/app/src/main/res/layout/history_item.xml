@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    app:cardElevation="8dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/cardView"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_calendar_today_24">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="26/04/2021"
+            android:textSize="20sp">
+
+        </TextView>
+        <Button
+            android:id="@+id/arrowBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/luongnuocIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/watericon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_luongnuoc"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="1000 ml"
+            android:textColor="#000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_luongnuocdesc"
+            app:layout_constraintStart_toEndOf="@id/luongnuocIcon"
+            app:layout_constraintTop_toTopOf="@+id/luongnuocIcon" />
+
+        <TextView
+            android:id="@+id/tv_luongnuocdesc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Lượng nước"
+            android:textColor="#8A000000"
+            app:layout_constraintBottom_toBottomOf="@+id/luongnuocIcon"
+            app:layout_constraintStart_toEndOf="@id/luongnuocIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_luongnuoc" />
+
+        <ImageView
+            android:id="@+id/daticon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/soilicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/luongnuocIcon" />
+
+        <TextView
+            android:id="@+id/tv_dat"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Đất cát"
+            android:textColor="#000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_datdesc"
+            app:layout_constraintStart_toEndOf="@id/daticon"
+            app:layout_constraintTop_toTopOf="@+id/daticon" />
+
+        <TextView
+            android:id="@+id/tv_datdesc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Loại đất"
+            android:textColor="#8A000000"
+            app:layout_constraintBottom_toBottomOf="@+id/daticon"
+            app:layout_constraintStart_toEndOf="@id/daticon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dat" />
+
+        <ImageView
+            android:id="@+id/modeIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/mode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/daticon" />
+
+        <TextView
+            android:id="@+id/tv_mode"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Thủ công"
+            android:textColor="#000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_modedesc"
+            app:layout_constraintStart_toEndOf="@id/modeIcon"
+            app:layout_constraintTop_toTopOf="@+id/modeIcon" />
+
+        <TextView
+            android:id="@+id/tv_modedesc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Chế độ"
+            android:textColor="#8A000000"
+            app:layout_constraintBottom_toBottomOf="@+id/modeIcon"
+            app:layout_constraintStart_toEndOf="@id/modeIcon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mode" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/datIcon"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="22dp"-->
+<!--            android:src="@drawable/humidity"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="luongnuocIcon" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_loaidat"-->
+<!--            style="@style/TextAppearance.AppCompat.Medium"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="32dp"-->
+<!--            android:text="1000ml"-->
+<!--            android:textColor="#000"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/tv_loaidatdesc"-->
+<!--            app:layout_constraintStart_toEndOf="@id/datIcon"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/datIcon" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_loaidatdesc"-->
+<!--            style="@style/TextAppearance.AppCompat.Body1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="32dp"-->
+<!--            android:text="Lượng nước"-->
+<!--            android:textColor="#8A000000"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/datIcon"-->
+<!--            app:layout_constraintStart_toEndOf="@id/datIcon"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_loaidat" />-->
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
