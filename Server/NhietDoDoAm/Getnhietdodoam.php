@@ -1,0 +1,29 @@
+<?php
+
+
+$servername = "localhost";
+$dbname = "data";
+$username = "root";
+$password = "";
+
+
+ $conn = new mysqli($servername, $username, $password, $dbname);
+        
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
+  
+$sql = "SELECT * FROM sensordata ORDER BY id DESC LIMIT 24";
+
+$result = mysqli_query($conn,$sql) or die("Failed");
+
+         while ($row = mysqli_fetch_array($result)) {
+           $data[] = $row;
+         }
+
+         print(json_encode($data));
+         json_decode("something");
+    
+          $conn->close();
+    
+ ?>
